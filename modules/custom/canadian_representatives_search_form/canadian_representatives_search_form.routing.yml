@@ -1,0 +1,7 @@
+canadian_representatives_search_form.representatives_search_form:
+  path: /representativessearchform
+  defaults:
+    _form: '\Drupal\canadian_representatives_search_form\Form\RepresentativesSearchForm'
+    _title: "Canadian Representatives Search"
+  requirements:
+    _permission: "access content"

@@ -1,0 +1,4 @@
+name: Canadian Representatives Search Module
+description: Creates a page showing a form to search for Canadian Representatives by Postal Code.
+core_version_requirement: ^8 || ^9
+type: module

@@ -22,6 +22,8 @@ class RepresentativesSearchForm extends FormBase {
         $form['postal_code'] = [
             '#type' => 'textfield',
             "#title" => $this->t('Postal Code'),
+            '#attributes' => array('placeholder' => t('Enter the Postal Code'), 'id' => t('postal_code')),
+            '#maxlength' => 10,
         ];
 
         $header = array(t('Representative Group'));
@@ -33,12 +35,18 @@ class RepresentativesSearchForm extends FormBase {
         $form['submit'] = [
           '#type' => 'submit',
           "#value" => $this->t('Search'),
-      ];
-
+          '#attributes' => array('id' => t('submit_btn')),
+      ];  
+      $form['reset'] = [
+         '#type' => 'button',
+         '#value' => 'See all',
+         '#attributes' => ['onclick' => 'resetForm(); return false;'],
+   
+      ]; 
         $form['example_table'] = [
             '#type' => 'table',
             '#header' => $header,
-            '#empty' => $this->t('Some text'),
+            '#empty' => $this->t('No Representatives found.'),
             '#rows' => $this->getTableRows($header, $form_state),
           ];
         return $form;

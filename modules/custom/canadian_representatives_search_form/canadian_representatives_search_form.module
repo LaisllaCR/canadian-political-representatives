@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Contains canadian_representatives_search_form.module..
+ */
+
+
+/**
+ * Implements hook_theme()
+ * @return mixed
+ */
+function canadian_representatives_search_form_theme() {
+  $theme['representatives_search_page'] = [
+    'variables' => ['msg' => NULL,'form' => []],
+    'template' => 'representatives_search',
+  ];
+
+  return $theme;
+}
